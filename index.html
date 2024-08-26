@@ -5,22 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Trouw Isabelle &amp; Nils</title>
     <link href="./style.css" rel="stylesheet" />
+    <script>
+      const startRickRoll = () => {
+        const frame = document.getElementById("rick-roll");
+        const wrapper = document.getElementById("easy-wrapper");
+        const src = frame.src;
+        frame.src = `${src}&autoplay=1`;
+        wrapper.classList.remove("hidden");
+      };
+    </script>
   </head>
   <body>
-    <h1>Oeps!</h1>
-    <p>
-      De makkelijke manier? Die hebben we weggegooid. Tijd om te laten zien wat
-      je kunt!
-    </p>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ZLHMVaelogdytjTy"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
+    <main>
+      <div class="container">
+        <h1>Oeps!</h1>
+        <p>
+          De makkelijke manier? Die hebben we weggegooid. Tijd om te laten zien
+          wat jullie kunnen!
+        </p>
+        <div class="buttons">
+          <a
+            class="button"
+            href="https://www.youtube.com/watch?v=S7ds0qZWmes"
+            target="_blank"
+            data-variant="primary"
+            >Fine, geef dan maar de moeijlijke</a
+          >
+          <button
+            class="button"
+            onclick="startRickRoll()"
+            data-variant="secondary"
+          >
+            Nee, we willen toch de gemakkelijke oplossing
+          </button>
+        </div>
+      </div>
+      <div id="easy-wrapper" class="hidden video-wrapper">
+        <iframe
+          id="rick-roll"
+          width="560"
+          height="400"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ZLHMVaelogdytjTy"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <div class="container">
+          <a
+            href="https://www.youtube.com/watch?v=F_RKceG1y0A"
+            target="_blank"
+            class="link"
+            >Allee dan, toch de gemakkelijke</a
+          >
+        </div>
+      </div>
+    </main>
   </body>
 </html>

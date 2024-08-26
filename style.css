@@ -1,0 +1,100 @@
+:root {
+  --primary-clr: #5a7766;
+  --primary-dark-clr: #3b5546;
+  --secondary-clr: #ffffff;
+  --accent-clr: #d5a289;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+main {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.container {
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.video-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+iframe {
+  padding-block: 1rem;
+}
+
+.link {
+  color: var(--primary-clr);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--primary-dark-clr);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--accent-clr);
+}
+
+h1 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 3.5rem;
+  color: var(--primary-clr);
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.button {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: unset;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.button[data-variant="primary"]:focus-visible,
+.button[data-variant="secondary"]:focus-visible {
+  outline: 3px solid var(--accent-clr);
+}
+
+.button[data-variant="primary"] {
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+}
+
+.button[data-variant="primary"]:hover,
+.button[data-variant="primary"]:focus-visible {
+  background-color: var(--primary-dark-clr);
+}
+
+.button[data-variant="secondary"] {
+  color: var(--primary-clr);
+  background-color: var(--secondary-clr);
+  outline: 2px solid var(--primary-clr);
+}
+
+.button[data-variant="secondary"]:hover,
+.button[data-variant="secondary"]:focus-visible {
+  border-color: var(--primary-dark-clr);
+  color: var(--primary-dark-clr);
+}
